@@ -4,7 +4,7 @@
         "format": "expanded",
         "extensionName": ".css",
 
-        // null for all three -> denotes the same path as the SASS file
+        // null for all three -> denotes the same path as the SASS files
         "savePath": null,
         "savePathSegmentKeys": null,
         "savePathReplaceSegmentsWith": null
