@@ -1,5 +1,6 @@
 <?php
 
+//---------add custom post type Vehicule---------------
 function cptui_register_my_cpts() {
 
 	/**
@@ -7,12 +8,12 @@ function cptui_register_my_cpts() {
 	 */
 
 	$labels = [
-		"name" => __( "Véhicules", "twentytwentytwo" ),
-		"singular_name" => __( "Véhicule", "twentytwentytwo" ),
+		"name" => __( "Véhicules" ),
+		"singular_name" => __( "Véhicule" ),
 	];
 
 	$args = [
-		"label" => __( "Véhicules", "twentytwentytwo" ),
+		"label" => __( "Véhicules" ),
 		"labels" => $labels,
 		"description" => "",
 		"public" => true,
@@ -44,3 +45,24 @@ function cptui_register_my_cpts() {
 
 add_action( 'init', 'cptui_register_my_cpts' );
 
+
+
+
+//-----------add theme support-------------------
+
+//post thumbnail
+add_theme_support( 'post-thumbnails' );
+
+//custom logo
+add_theme_support( 'custom-logo', array(
+	'height' => 480,
+    'width'  => 720,
+	) );
+	
+	
+//-----------add MENU-------------------
+	
+	function custom_header_menu() {
+		register_nav_menu('header_menu',__( 'HeaderMenu' ));
+	}
+add_action( 'init', 'custom_header_menu' );
