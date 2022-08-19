@@ -14,9 +14,9 @@
         </div>
         <p class="blogDescription"><?php bloginfo('description'); ?> </p>
     </div>
-    <div class="FooterMenu">
+    <div class="footerMenuContainer">
         <div class="aboutMenu">
-            <h3>About</h3>
+            <h2>About</h2>
             <nav class="aboutNav">
                 <ul>
                     <li>
@@ -35,7 +35,7 @@
             </nav>
         </div>
         <div class="ComunityMenu">
-            <h3>Community</h3>
+            <h2>Community</h2>
             <nav class="aboutNav">
                 <ul>
                     <li>
@@ -54,7 +54,7 @@
             </nav>
         </div>
         <div class="SocialsMenu">
-            <h3>Socials</h3>
+            <h2>Socials</h2>
             <nav class="aboutNav">
                 <ul>
                     <li>

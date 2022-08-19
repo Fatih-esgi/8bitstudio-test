@@ -1,0 +1,113 @@
+.card {
+  width: 268px;
+  height: 340px;
+  background: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  transition: all ease-in 0.2s;
+  box-shadow: 0px 0px 9px 2px transparent;
+  &:hover {
+    transform: scale(1.02);
+    transition: all ease-in 0.2s;
+    box-shadow: 0px 0px 9px 2px #0000000a;
+
+    a.cardLink .imageBox .gradientWhite {
+      opacity: 0;
+      transition: all ease-in 0.2s;
+    }
+  }
+  a.cardLink {
+    width: auto;
+    height: auto;
+    text-decoration: none;
+    color: var(--Primary);
+
+    .titleBlock {
+      display: flex;
+      justify-content: space-between;
+      h1 {
+        @include fontSizeBold;
+        font-size: 1.4285714285714286em;
+      }
+    }
+    p.category {
+      @include fontSizeBold;
+      font-size: 1em;
+      line-height: 150%;
+      display: flex;
+      align-items: center;
+      letter-spacing: 0.2px;
+      color: #90a3bf;
+      margin-top: 2px;
+    }
+
+    .imageBox {
+      width: 100%;
+      height: 152px;
+      margin: 10px 0 27px 0;
+      display: flex;
+      align-content: center;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      img {
+        width: 97%;
+        height: auto;
+        object-position: bottom;
+      }
+      .gradientWhite {
+        opacity: 1;
+        background: var(--GradientWhite);
+        height: 82px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        transition: all ease-in 0.2s;
+      }
+    }
+    .specification {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      p {
+        display: flex;
+        flex-direction: row;
+        gap: 9px;
+        color: var(--Secondary);
+        align-items: center;
+        align-content: center;
+        line-height: 3px;
+        font-weight: 500;
+      }
+    }
+  }
+  .footerCard {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2.1em;
+    .price {
+      .standardPrice {
+        font-size: 1.4285714285714286em;
+
+        span.day {
+          font-size: 1rem;
+          color: var(--Secondary);
+          margin-left: 4px;
+        }
+      }
+      .soldedPrice {
+        p {
+          color: var(--Secondary);
+          text-decoration: line-through;
+          font-weight: 600;
+          margin-top: 4px;
+        }
+      }
+    }
+  }
+}

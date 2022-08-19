@@ -1,0 +1,27 @@
+:root {
+  --background: #f6f7f9;
+  --border: rgba(195, 212, 233, 0.4);
+  --White: #ffffff;
+  --Primary: #1a202c;
+  --Secondary: #90a3bf;
+  --InputColor: #596780;
+  --GradientWhite: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    #ffffff 100%
+  );
+  --Blue: #3563e9;
+  --lightGray: #13131399;
+}
+
+@mixin fontSizeBold {
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+@mixin fontSizeSemiBold {
+  font-size: 1.1428571428571428em;
+  font-weight: 500;
+}
+@mixin fontSizeMedium {
+  font-weight: 400;
+}

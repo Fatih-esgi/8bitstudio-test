@@ -11,8 +11,35 @@ Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-me
 Version: 1
 Requires at least: 6.0
 Tested up to: 6
-Requires PHP: 8.1
 */
-@import url("https://fonts.googleapis.com/css2?family=Bitter:wght@300;400&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,800;1,300;1,400&display=swap");
+@font-face {
+  font-family: PlusJakartaSans;
+  src: url(https://morent.fat-e.ch/wp-content/themes/morent/assets/fonts/PlusJakartaSans-Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: PlusJakartaSans;
+  src: url(https://morent.fat-e.ch/wp-content/themes/morent/assets/fonts/PlusJakartaSans-SemiBold.ttf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: PlusJakartaSans;
+  src: url(https://morent.fat-e.ch/wp-content/themes/morent/assets/fonts/PlusJakartaSans-Medium.ttf);
+  font-weight: 500;
+}
 
-@import "scss/_variables.scss"
+@import "scss/_variables", "scss/_global.scss", "scss/_header.scss",
+  "scss/_productCard.scss", "scss/_footerMenu", "scss/_footer.scss";
+
+* {
+  font-family: "PlusJakartaSans";
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+}
+
+html {
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}

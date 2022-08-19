@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
+
 <head>
     <?php wp_head(); ?>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Our vision is to provide convenience and help increase your sales business.">
+    <title>Morent, car location</title>
 </head>
 
-<body <?php body_class();?>);">
- <?php wp_body_open(); ?>
+<body <?php body_class();?>>
+    <?php wp_body_open(); ?>
     <header class="header">
         <div class="logo">
             <?php   
@@ -24,7 +26,7 @@
         <div class="search">
             <?php get_search_form(); ?>
         </div>
-                <?php
+        <?php
 wp_nav_menu( array( 
     'theme_location' => 'header_menu', 
     'container'       => 'nav',

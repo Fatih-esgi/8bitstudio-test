@@ -1,5 +1,405 @@
+/*
+Theme Name:Morent
+Theme URI: https://inmotion-suisse.ch/
+Author: Fatih Esgi
+Author URI: https://fat-e.ch/
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: inmotion
+Description: Our default theme for 2020 is designed to take full advantage of the flexibility of the block editor. Organizations and businesses have the ability to create dynamic landing pages with endless layouts using the group and column blocks. The centered content column and fine-tuned typography also makes it perfect for traditional blogs. Complete editor styles give you a good idea of what your content will look like, even before you publish. You can give your site a personal touch by changing the background colors and the accent color in the Customizer. The colors of all elements on your site are automatically calculated based on the colors you pick, ensuring a high, accessible color contrast for your visitors.
+Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
+Version: 1
+Requires at least: 6.0
+Tested up to: 6
+*/
+@font-face {
+  font-family: PlusJakartaSans;
+  src: url(https://morent.fat-e.ch/wp-content/themes/morent/assets/fonts/PlusJakartaSans-Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: PlusJakartaSans;
+  src: url(https://morent.fat-e.ch/wp-content/themes/morent/assets/fonts/PlusJakartaSans-SemiBold.ttf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: PlusJakartaSans;
+  src: url(https://morent.fat-e.ch/wp-content/themes/morent/assets/fonts/PlusJakartaSans-Medium.ttf);
+  font-weight: 500;
+}
+:root {
+  --background: #f6f7f9;
+  --border: rgba(195, 212, 233, 0.4);
+  --White: #ffffff;
+  --Primary: #1a202c;
+  --Secondary: #90a3bf;
+  --InputColor: #596780;
+  --GradientWhite: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    #ffffff 100%
+  );
+  --Blue: #3563e9;
+  --lightGray: #13131399;
+}
+
+html {
+  background-color: var(--background);
+}
+
+.button {
+  width: 116px;
+  height: 44px;
+  background-color: var(--Blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all ease-in 0.2s;
+}
+.button a {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: var(--White);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+}
+.button:hover {
+  transition: all ease-in 0.2s;
+  background-color: #344f9b;
+}
+
+.containerGrid {
+  width: 71%;
+  align-items: end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin: 99px auto 10px auto;
+  gap: 32px;
+  justify-items: center;
+}
+@media screen and (max-width: 1440px) {
+  .containerGrid {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 1232px) {
+  .containerGrid {
+    width: 90%;
+  }
+}
+
+.productsFooter {
+  display: flex;
+  width: 69%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 54px auto 175px auto;
+}
+.productsFooter .button {
+  padding: 0 20px;
+}
+.productsFooter .productsCount {
+  position: absolute;
+  right: 0;
+  color: var(--Secondary);
+  font-weight: 500;
+}
+
+.header {
+  display: flex;
+  height: 124px;
+  background-color: var(--White);
+  justify-content: space-between;
+  padding: 0 60px;
+  align-items: center;
+  border: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+.header .logo {
+  flex: 0 0 142px;
+  width: 142px;
+  height: auto;
+}
+.header .logo img {
+  width: 100%;
+  height: auto;
+}
+.header .search {
+  display: flex;
+  gap: 1.6428571429em;
+  align-items: center;
+  padding: 10px 20px;
+  border: 1px solid var(--border);
+  border-radius: 70px;
+  flex: 0 1 452px;
+  max-width: 452px;
+  margin-right: 12%;
+}
+@media screen and (max-width: 1360px) {
+  .header .search {
+    flex: 0 1 100%;
+    max-width: 248px;
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+}
+.header .search form.search-form {
+  width: 100%;
+}
+.header .search form.search-form .search-field {
+  border: none;
+  color: var(--InputColor);
+  line-height: 150%;
+  font-weight: 500;
+  width: 100%;
+}
+.header .search form.search-form .search-field:focus {
+  outline: none;
+}
+.header nav.headerMenu {
+  flex: 0 1 380px;
+}
+@media screen and (max-width: 978px) {
+  .header nav.headerMenu {
+    margin: 0 auto;
+  }
+}
+.header nav.headerMenu ul#menu-menu {
+  display: flex;
+  gap: 1.7857142857em;
+}
+.header nav.headerMenu ul#menu-menu li {
+  list-style: none;
+}
+.header nav.headerMenu ul#menu-menu li a {
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  color: var(--Primary);
+  text-decoration: none;
+  font-size: 1.4285714286em;
+}
+
+.card {
+  width: 268px;
+  height: 340px;
+  background: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  transition: all ease-in 0.2s;
+  box-shadow: 0px 0px 9px 2px transparent;
+}
+.card:hover {
+  transform: scale(1.02);
+  transition: all ease-in 0.2s;
+  box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.0392156863);
+}
+.card:hover a.cardLink .imageBox .gradientWhite {
+  opacity: 0;
+  transition: all ease-in 0.2s;
+}
+.card a.cardLink {
+  width: auto;
+  height: auto;
+  text-decoration: none;
+  color: var(--Primary);
+}
+.card a.cardLink .titleBlock {
+  display: flex;
+  justify-content: space-between;
+}
+.card a.cardLink .titleBlock h1 {
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  font-size: 1.4285714286em;
+}
+.card a.cardLink p.category {
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  font-size: 1em;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.2px;
+  color: #90a3bf;
+  margin-top: 2px;
+}
+.card a.cardLink .imageBox {
+  width: 100%;
+  height: 152px;
+  margin: 10px 0 27px 0;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+.card a.cardLink .imageBox img {
+  width: 97%;
+  height: auto;
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+.card a.cardLink .imageBox .gradientWhite {
+  opacity: 1;
+  background: var(--GradientWhite);
+  height: 82px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  transition: all ease-in 0.2s;
+}
+.card a.cardLink .specification {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card a.cardLink .specification p {
+  display: flex;
+  flex-direction: row;
+  gap: 9px;
+  color: var(--Secondary);
+  align-items: center;
+  align-content: center;
+  line-height: 3px;
+  font-weight: 500;
+}
+.card .footerCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2.1em;
+}
+.card .footerCard .price .standardPrice {
+  font-size: 1.4285714286em;
+}
+.card .footerCard .price .standardPrice span.day {
+  font-size: 1rem;
+  color: var(--Secondary);
+  margin-left: 4px;
+}
+.card .footerCard .price .soldedPrice p {
+  color: var(--Secondary);
+  text-decoration: line-through;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.footerMenu {
+  background-color: var(--White);
+  padding: 80px 60px 35px 60px;
+  display: flex;
+}
+@media screen and (max-width: 1080px) {
+  .footerMenu {
+    flex-direction: column;
+    align-items: stretch;
+    align-content: center;
+    text-align: center;
+    gap: 3rem;
+  }
+}
+.footerMenu .Brand {
+  flex: 0 1 50%;
+}
+.footerMenu .Brand p.blogDescription {
+  margin-top: 16px;
+  color: var(--lightGray);
+  font-size: 1.1428571429em;
+  font-weight: 500;
+  width: 300px;
+  line-height: 1.5em;
+}
+@media screen and (max-width: 1080px) {
+  .footerMenu .Brand p.blogDescription {
+    margin: 0 auto;
+    margin-top: 1rem;
+  }
+}
+.footerMenu .footerMenuContainer {
+  flex: 0 1 50%;
+  display: flex;
+  justify-content: space-around;
+  text-align: left;
+}
+.footerMenu .footerMenuContainer h2 {
+  font-size: 1.4285714286em;
+  font-weight: 600;
+  margin-bottom: 42px;
+}
+.footerMenu .footerMenuContainer ul {
+  gap: 2rem;
+  flex-direction: column;
+  display: flex;
+}
+.footerMenu .footerMenuContainer ul li {
+  list-style: none;
+}
+.footerMenu .footerMenuContainer ul li a {
+  font-size: 1.1428571429em;
+  text-decoration: none;
+  color: var(--lightGray);
+  display: block;
+  font-weight: 500;
+}
+
+footer#footer {
+  background-color: var(--White);
+  padding: 0px 60px;
+}
+footer#footer .wrapper {
+  border-top: 1px solid var(--lightGray);
+  padding-top: 36px;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 740px) {
+  footer#footer .wrapper {
+    flex-direction: column;
+    align-items: center;
+    align-content: space-around;
+    gap: 0.7rem;
+  }
+}
+footer#footer .wrapper p {
+  font-size: 1.1428571429em;
+  font-weight: 600;
+}
+footer#footer .wrapper .footerLinks {
+  font-size: 1.1428571429em;
+  display: flex;
+  gap: 60px;
+}
+@media screen and (max-width: 810px) {
+  footer#footer .wrapper .footerLinks {
+    gap: 30px;
+  }
+}
+footer#footer .wrapper .footerLinks a {
+  text-decoration: none;
+  color: var(--Primary);
+  font-weight: 600;
+}
+
 * {
+  font-family: "PlusJakartaSans";
   margin: 0;
   padding: 0;
-  color: red;
+  font-weight: 700;
+}
+
+html {
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }/*# sourceMappingURL=style.css.map */
