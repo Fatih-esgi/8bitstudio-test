@@ -65,7 +65,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 16px;
+  font-size: 1.1428571429em;
   font-weight: 500;
 }
 .button:hover {
@@ -310,6 +310,9 @@ html {
 }
 .footerMenu .Brand {
   flex: 0 1 50%;
+}
+.footerMenu .Brand .logo img {
+  width: 148px;
 }
 .footerMenu .Brand p.blogDescription {
   margin-top: 16px;

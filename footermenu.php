@@ -6,7 +6,7 @@
                 $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
                 
                 if ( has_custom_logo() ) {
-                    echo '<a class="homeLogo" href="/"><img src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '"></a>';
+                    echo '<img src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '">';
                 } else {
                     echo '<h1>' . get_bloginfo('name') . '</h1>';
                 }

@@ -11,6 +11,11 @@
   }
   .Brand {
     flex: 0 1 50%;
+    .logo {
+      img {
+        width: 148px;
+      }
+    }
     p.blogDescription {
       margin-top: 16px;
       color: var(--lightGray);
